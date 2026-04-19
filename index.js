@@ -8,3 +8,16 @@ formEl.addEventListener("submit", (event) => {
     const cityValue = cityInputEl.value;
     getWeatherData(cityValue);
   });
+
+  async function getWeatherData(cityValue) {
+    const response = await fetch(
+        'https://api.openweathermap.org/data/2.5/weather?q=${cityValue}&appid=&{apikey}&units=metric'
+      );
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      const data = await response.json();
+      const temperature = Math.round(data.main.temp);
+    const description = data.weather[0].description;
+    const icon = data.weather[0].icon;
+  }
