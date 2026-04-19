@@ -1,4 +1,4 @@
-#Weather International
+## Weather International
 
 Eu desenvolvi este projeto com o objetivo de praticar integração com APIs externas e manipulação de dados em tempo real no front-end. Trata-se de uma aplicação web simples de previsão do tempo, onde o usuário pode consultar as condições climáticas de qualquer cidade digitando o nome no campo de busca.
 
